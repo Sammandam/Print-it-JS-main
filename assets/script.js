@@ -1,3 +1,5 @@
+console.log('script chargé');
+
 const slides = [
 	{
 		"image":"slide1.jpg",
@@ -16,3 +18,17 @@ const slides = [
 		"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>"
 	}
 ]
+
+const arrowLeft = document.querySelector('.arrow_left');
+const arrowRight = document.querySelector('.arrow_right');
+
+arrowLeft.addEventListener('click', function() {
+	console.log('Flèche gauche cliquée');
+});
+
+arrowRight.addEventListener('click', function() {
+	console.log('Flèche droite cliquée');
+});
+
+console.log(arrowLeft);
+console.log(arrowRight);
