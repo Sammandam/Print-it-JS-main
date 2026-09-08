@@ -33,4 +33,15 @@ arrowRight.addEventListener('click', function() {
 console.log(arrowLeft);
 console.log(arrowRight);
 
+const pBanner = document.querySelector('#banner p');
+const imgBanner = document.querySelector('#banner img');
+const imgBannerSrc = imgBanner.getAttribute('src');
+const parentDot = document.querySelector("#banner div");
+const spans = [];
 
+for (let i = 0; i < slides.length; i++) {
+	spans.push(document.createElement("span"));
+	spans[i].classList.add("dot");
+	parentDot.appendChild(spans[i]);
+}
+spans[0].classList.add("dot_selected");
