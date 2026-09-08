@@ -45,3 +45,34 @@ for (let i = 0; i < slides.length; i++) {
 	parentDot.appendChild(spans[i]);
 }
 spans[0].classList.add("dot_selected");
+
+let currentIndex = 0;
+
+function updateSlide() {
+	// Changer l'image
+	imgBanner.setAttribute('src', './assets/images/slideshow/' + slides[currentIndex].image);
+	pBanner.innerHTML = slides[currentIndex].tagLine;
+
+	spans.forEach(function(dot) {
+		dot.classList.remove('dot_selected');
+	});
+	spans[currentIndex].classList.add('dot_selected');
+}
+
+arrowRight.addEventListener('click', function() {
+	if (currentIndex === slides.length - 1) {
+		currentIndex = 0;
+	} else {
+		currentIndex = currentIndex + 1;
+	}
+	updateSlide();
+});
+
+arrowLeft.addEventListener('click', function() {
+	if (currentIndex === 0) {
+		currentIndex = slides.length - 1;
+	} else {
+		currentIndex = currentIndex - 1;
+	}
+	updateSlide();
+});
