@@ -32,3 +32,5 @@ arrowRight.addEventListener('click', function() {
 
 console.log(arrowLeft);
 console.log(arrowRight);
+
+

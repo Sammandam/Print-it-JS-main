@@ -125,14 +125,6 @@ header {
 /* Gestion des fleches du carrousel */
 #banner .arrow {
 	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	font-size: 30px;
-	font-weight: 400;
-	color: white;
-	cursor: pointer;
-	z-index: 1;
-	text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 #banner .arrow_left {
 	left: 10px;
