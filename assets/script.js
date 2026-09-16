@@ -1,4 +1,3 @@
-console.log('script chargé');
 
 const slides = [
 	{
@@ -22,17 +21,6 @@ const slides = [
 const arrowLeft = document.querySelector('.arrow_left');
 const arrowRight = document.querySelector('.arrow_right');
 
-arrowLeft.addEventListener('click', function() {
-	console.log('Flèche gauche cliquée');
-});
-
-arrowRight.addEventListener('click', function() {
-	console.log('Flèche droite cliquée');
-});
-
-console.log(arrowLeft);
-console.log(arrowRight);
-
 const pBanner = document.querySelector('#banner p');
 const imgBanner = document.querySelector('#banner img');
 const imgBannerSrc = imgBanner.getAttribute('src');
@@ -45,6 +33,7 @@ for (let i = 0; i < slides.length; i++) {
 	parentDot.appendChild(spans[i]);
 }
 spans[0].classList.add("dot_selected");
+
 
 let currentIndex = 0;
 
